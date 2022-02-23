@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.input{
+  font-weight: bold;
+}
+
+.input--farsi{
+  direction: rtl;
+  font-family: 'B Nazanin', sans-serif;
+}
+
+.input--english{
+  font-family: 'Segoe UI Light', sans-serif;
+}
+
+.input::placeholder {
+  color: rgba(163, 163, 163, 0.45);
+}
