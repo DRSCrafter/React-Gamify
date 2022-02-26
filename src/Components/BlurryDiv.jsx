@@ -1,7 +1,7 @@
 import React from "react";
 import BackdropFilter from 'react-backdrop-filter';
 
-function BlurryDiv({children, width, height, borderRadius}) {
+function BlurryDiv({children, width, height, borderRadius= 200}) {
     return (
         <div style={{
             width: width,
