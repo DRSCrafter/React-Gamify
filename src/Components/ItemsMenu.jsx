@@ -5,7 +5,7 @@ import * as React from "react";
 import '../App.css';
 import {ListItemIcon, ListItemText} from "@mui/material";
 
-export default function ItemsMenu({itemList}) {
+export default function ItemsMenu({title, values}) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -24,8 +24,8 @@ export default function ItemsMenu({itemList}) {
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
             >
-                <span style={{color: 'white'}}>
-                Dashboard
+                <span style={{color: 'white', fontFamily: 'B Nazanin', fontSize: '1.3rem'}}>
+                {title}
                 </span>
             </Button>
             <Menu
@@ -45,19 +45,20 @@ export default function ItemsMenu({itemList}) {
                     horizontal: 'center',
                 }}
             >
-                {itemList.map((item) => (
+                {values.map((value) => (
                     <MenuItem onClick={handleClose}>
                         <div style={{
                             display: 'flex',
                             flexDirection: 'row',
                             alignItems: 'center',
                             justifyContent: 'space-between',
+                            margin: 10
                         }}>
                             <ListItemIcon>
-                                <img style={{width: 50, height: 50, marginRight: 15}} src={item.image} alt='icon'/>
+                                <img style={{width: 50, height: 50, marginRight: 15}} src={value.image} alt='icon'/>
                             </ListItemIcon>
                             <ListItemText style={{width: 135}}>
-                                {item.name}
+                                {value.name}
                             </ListItemText>
                         </div>
                     </MenuItem>

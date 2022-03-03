@@ -39,6 +39,7 @@
 
 .input{
   font-weight: bold;
+  color: white;
 }
 
 .input--farsi{
@@ -52,4 +53,8 @@
 
 .input::placeholder {
   color: rgba(163, 163, 163, 0.45);
+}
+
+canvas{
+  filter: blur(1px);
 }

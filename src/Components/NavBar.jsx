@@ -7,13 +7,15 @@ export default function NavBar({items}) {
         <BlurryDiv>
             <div style={{
                 display: 'flex',
-                width: 700,
+                width: '50vw',
                 flexDirection: 'row',
                 justifyContent: 'space-around',
                 marginTop: 20,
                 marginBottom: 20
             }}>
-                {items.map(itemList => (<ItemsMenu itemList={itemList} /> ))}
+                {items.map(itemList =>
+                    (<ItemsMenu title={itemList.title} values={itemList.values}/>)
+                )}
             </div>
         </BlurryDiv>
     );
