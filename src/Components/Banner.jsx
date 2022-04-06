@@ -71,7 +71,7 @@ function Banner() {
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),  url(${require(`../Assets/Wallpaper/${index}.jpg`)})`,
                 backgroundSize: 'cover',
                 position: 'relative',
-                zIndex: 999
+                zIndex: 10
             }}>
                 <img src={chevronLeft}
                      style={{width: 25, height: 25, position: 'absolute', left: 5, top: '50vh', cursor: 'pointer'}}
