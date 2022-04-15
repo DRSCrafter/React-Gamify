@@ -29,7 +29,8 @@ function Footer() {
                     height: "40vh",
                     background: "linear-gradient(rgba(14,36,51,1) 0%, rgba(36,32,59,1) 35%, rgba(58,25,65,1) 100%)",
                     color: 'white',
-                    fontFamily: 'Segoe UI Light'
+                    fontFamily: 'Segoe UI Light',
+                    marginTop: '4vw'
                 }}
             >
                 <span style={{
@@ -87,23 +88,23 @@ function Footer() {
                 }}>
                     <div style={{marginBottom: '1.1vw', fontSize: matches ? '2vw' : '1.3vw'}}>حساب کاربری</div>
                     <div>
-                        <img src={chevronLeft} style={styles.chevron}/>
+                        <img src={chevronLeft} style={styles.chevron} alt="chevron"/>
                         <a href="#" style={styles.link}>سفارشات من</a>
                     </div>
                     <div>
-                        <img src={chevronLeft} style={styles.chevron}/>
+                        <img src={chevronLeft} style={styles.chevron} alt="chevron"/>
                         <a href="#" style={styles.link}>صورت های مالی من</a>
                     </div>
                     <div>
-                        <img src={chevronLeft} style={styles.chevron}/>
+                        <img src={chevronLeft} style={styles.chevron} alt="chevron"/>
                         <a href="#" style={styles.link}>آدرس های من</a>
                     </div>
                     <div>
-                        <img src={chevronLeft} style={styles.chevron}/>
+                        <img src={chevronLeft} style={styles.chevron} alt="chevron"/>
                         <a href="#" style={styles.link}> شخصی</a>
                     </div>
                     <div>
-                        <img src={chevronLeft} style={styles.chevron}/>
+                        <img src={chevronLeft} style={styles.chevron} alt="chevron"/>
                         <a href="#" style={styles.link}>تخفیف های من</a>
                     </div>
                 </span>

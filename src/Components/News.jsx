@@ -1,4 +1,5 @@
 import '../App.css';
+import '../Styles/Style.css';
 import React, {useEffect, useState} from 'react';
 import Button from "@mui/material/Button";
 
@@ -13,7 +14,7 @@ function News() {
     });
 
     return (
-        <>
+        <div style={{display: 'flex', justifyContent: 'center', marginTop: '4vw'}}>
             <div style={styles.grid(matches)}>
                 <Button variant="outlined" sx={styles.btn(matches)}>
                     دیدن همه
@@ -25,11 +26,11 @@ function News() {
                     direction: 'rtl',
                     gridArea: matches ? '1/2/2/3' : '1/3/2/4',
                 }}>اخبار</span>
-                <a href="#" style={{
+                <a className="scale-container shadow-container" href="#" style={{
                     ...styles.gridItem,
                     gridArea: '2/1/7/3'
                 }}>
-                    <img src={require("./Assets/news (1).png")} alt='news'
+                    <img src={require("../Assets/news (1).png")} alt='news'
                          style={{width: '100%', height: '100%', zIndex: -1}}/>
                     <span style={{
                         ...styles.newsTitle(matches),
@@ -44,21 +45,21 @@ function News() {
                         fontSize: matches ? '1.6vw' : '0.8vw',
                     }}>2 ساعت پیش</span>
                 </a>
-                <a href="#" style={{
+                <a className="scale-container shadow-container" href="#" style={{
                     ...styles.gridItem,
                     gridArea: '7/1/10/2',
                 }}>
-                    <img src={require("./Assets/news (3).jpg")} alt='news'
+                    <img src={require("../Assets/news (3).jpg")} alt='news'
                          style={{width: '100%', height: '100%', zIndex: -1}}/>
                     <span
                         style={styles.newsTitle(matches)}>لویجی صلاخی شد!</span>
                     <span style={styles.newsTime(matches)}>2 ساعت پیش</span>
                 </a>
-                <a href="#" style={{
+                <a className="scale-container shadow-container" href="#" style={{
                     ...styles.gridItem,
                     gridArea: '7/2/10/3',
                 }}>
-                    <img src={require("./Assets/news (4).jpg")} alt='news'
+                    <img src={require("../Assets/news (4).jpg")} alt='news'
                          style={{width: '100%', height: '100%', zIndex: -1}}/>
                     <span
                         style={styles.newsTitle(matches)}>لویجی صلاخی شد!</span>
@@ -66,27 +67,27 @@ function News() {
                 </a>
                 {!matches &&
                 <>
-                    <a href="#" style={{
+                    <a className="scale-container shadow-container" href="#" style={{
                         ...styles.gridItem,
                         gridArea: '2/3/5/4',
                     }}>
-                        <img src={require("./Assets/news (1).jpg")} alt='news'
+                        <img src={require("../Assets/news (1).jpg")} alt='news'
                              style={{width: '100%', height: '100%', zIndex: -1}}/>
                         <span
                             style={styles.newsTitle(matches)}>لویجی صلاخی شد!</span>
                         <span style={styles.newsTime(matches)}>2 ساعت پیش</span>
                     </a>
-                    <a href="#" style={{
+                    <a className="scale-container shadow-container" href="#" style={{
                         ...styles.gridItem,
                         gridArea: '5/3/8/4',
                     }}>
-                        <img src={require("./Assets/news (2).jpg")} alt='news'
+                        <img src={require("../Assets/news (2).jpg")} alt='news'
                              style={{width: '100%', height: '100%', zIndex: -1}}/>
                         <span
                             style={styles.newsTitle(matches)}>لویجی صلاخی شد!</span>
                         <span style={styles.newsTime(matches)}>2 ساعت پیش</span>
                     </a>
-                    <a href="#" style={{
+                    <a className="scale-container shadow-container" href="#" style={{
                         ...styles.gridItem,
                         display: 'flex',
                         justifyContent: 'center',
@@ -99,12 +100,12 @@ function News() {
                             height: '100%',
                             zIndex: -1,
                             filter: 'brightness(50%)'
-                        }} src={require("./Assets/nature.jpg")} alt="news"/>
+                        }} src={require("../Assets/nature.jpg")} alt="news"/>
                         <span style={{fontSize: '1.5vw'}}>اخبار بیشتر</span>
                     </a>
                 </>}
             </div>
-        </>
+        </div>
     );
 }
 
@@ -115,7 +116,8 @@ const styles =
             marginLeft: 30,
             marginTop: 30,
             display: 'grid',
-            width: '70%',
+            width: '80%',
+            margin: 'auto',
             height: '80vh',
             gridTemplateRows: 'repeat(9, 1fr)',
             gridTemplateColumns: matches ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
